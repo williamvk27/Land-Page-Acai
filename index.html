@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <title>Açaí Formulário</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="box-content">
+        <h2>Nossos melhores pedidos</h2>
+        <div class="pedidos-mais-pedidos">
+          <div class="pedido-mais-pedido box-pedidos">
+            <img
+              src="img/açaiTeste.jpg"
+              width="124px"
+              height="124px"
+              alt="coco ralado, amendoim e biscoito"
+            />
+            <div class="descricao-pedido">
+              <h3>coco ralado, amendoim, biscoito, Jujuba, Sucrilho</h3>
+              <p>Tamanho: 500ml</p>
+              <p>Preço: R$ 9,00</p>
+              <div class="quantity-controls">
+                <button
+                  class="quantity-button buttonExtra"
+                  type="button"
+                  onclick="decreaseQuantity(this)"
+                >
+                  -
+                </button>
+                <span class="quantity">0</span>
+                <button
+                  class="quantity-button buttonExtra"
+                  type="button"
+                  onclick="increaseQuantity(this)"
+                >
+                  +
+                </button>
+              </div>
+              <button
+                class="botao-adicionar"
+                onclick="adicionarAoCarrinho(this)"
+              >
+                Adicionar
+              </button>
+            </div>
+          </div>
+          <div class="pedido-mais-pedido box-pedidos">
+            <img
+              src="img/açaiTeste.jpg"
+              width="124px"
+              height="124px"
+              alt="coco ralado, amendoim e biscoito"
+            />
+            <div class="descricao-pedido">
+              <h3>coco ralado, amendoim, biscoito, Jujuba, Sucrilho</h3>
+              <p>Tamanho: 500ml</p>
+              <p>Preço: R$ 9,00</p>
+              <div class="quantity-controls">
+                <button
+                  class="quantity-button buttonExtra"
+                  type="button"
+                  onclick="decreaseQuantity(this)"
+                >
+                  -
+                </button>
+                <span class="quantity">0</span>
+                <button
+                  class="quantity-button buttonExtra"
+                  type="button"
+                  onclick="increaseQuantity(this)"
+                >
+                  +
+                </button>
+              </div>
+              <button
+                class="botao-adicionar"
+                onclick="adicionarAoCarrinho(this)"
+              >
+                Adicionar
+              </button>
+            </div>
+          </div>
+          <div class="pedido-mais-pedido box-pedidos">
+            <img
+              src="img/açaiTeste.jpg"
+              width="124px"
+              height="124px"
+              alt="coco ralado, amendoim e biscoito"
+            />
+            <div class="descricao-pedido">
+              <h3>coco ralado, amendoim, biscoito, Jujuba, Sucrilho</h3>
+              <p>Tamanho: 500ml</p>
+              <p>Preço: R$ 9,00</p>
+              <div class="quantity-controls">
+                <button
+                  class="quantity-button buttonExtra"
+                  type="button"
+                  onclick="decreaseQuantity(this)"
+                >
+                  -
+                </button>
+                <span class="quantity">0</span>
+                <button
+                  class="quantity-button buttonExtra"
+                  type="button"
+                  onclick="increaseQuantity(this)"
+                >
+                  +
+                </button>
+              </div>
+              <button
+                class="botao-adicionar"
+                onclick="adicionarAoCarrinho(this)"
+              >
+                Adicionar
+              </button>
+            </div>
+          </div>
+          <div class="pedido-mais-pedido box-pedidos">
+            <img
+              src="img/açaiTeste.jpg"
+              width="124px"
+              height="124px"
+              alt="coco ralado, amendoim e biscoito"
+            />
+            <div class="descricao-pedido">
+              <h3>coco ralado, amendoim, biscoito, Jujuba, Sucrilho</h3>
+              <p>Tamanho: 500ml</p>
+              <p>Preço: R$ 9,00</p>
+              <div class="quantity-controls">
+                <button
+                  class="quantity-button buttonExtra"
+                  type="button"
+                  onclick="decreaseQuantity(this)"
+                >
+                  -
+                </button>
+                <span class="quantity">0</span>
+                <button
+                  class="quantity-button buttonExtra"
+                  type="button"
+                  onclick="increaseQuantity(this)"
+                >
+                  +
+                </button>
+              </div>
+              <button
+                class="botao-adicionar"
+                onclick="adicionarAoCarrinho(this)"
+              >
+                Adicionar
+              </button>
+            </div>
+          </div>
+        </div>
+        <form id="pedidoForm" onsubmit="handleSubmit(event)">
+          <h3>Escolha o tamanho</h3>
+          <select id="tamanhoSelect" class="seleta">
+            <option value="200ml" data-price="4.00">200ml - R$ 4,00</option>
+            <option value="300ml" data-price="6.00">300ml - R$ 6,00</option>
+            <option value="400ml" data-price="8.00">400ml - R$ 8,00</option>
+            <option value="500ml" data-price="9.00">500ml - R$ 9,00</option>
+            <option value="700ml" data-price="11.00">700ml - R$ 11,00</option>
+            <option value="1000ml" data-price="21.00">1000ml - R$ 21,00</option>
+          </select>
+
+          <h3>Escolha os acompanhamentos</h3>
+          <div class="checkbox-grid">
+            <label>
+              <input type="checkbox" value="Amendoim" class="acompCheckbox" />
+              Amendoim
+            </label>
+            <label>
+              <input type="checkbox" value="Biscoito" class="acompCheckbox" />
+              Biscoito
+            </label>
+            <label>
+              <input type="checkbox" value="Chocobol" class="acompCheckbox" />
+              Chocobol
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                value="Coco Ralado"
+                class="acompCheckbox"
+              />
+              Coco Ralado
+            </label>
+            <label>
+              <input type="checkbox" value="Confete" class="acompCheckbox" />
+              Confete
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                value="Flocos de Arroz"
+                class="acompCheckbox"
+              />
+              Flocos de Arroz
+            </label>
+            <label>
+              <input type="checkbox" value="Granola" class="acompCheckbox" />
+              Granola
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                value="Granulado Chocolate"
+                class="acompCheckbox"
+              />
+              Granulado Chocolate
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                value="Granulado Colorido"
+                class="acompCheckbox"
+              />
+              Granulado Colorido
+            </label>
+            <label>
+              <input type="checkbox" value="Jujuba" class="acompCheckbox" />
+              Jujuba
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                value="Leite em Pó"
+                class="acompCheckbox"
+              />
+              Leite em Pó
+            </label>
+            <label>
+              <input type="checkbox" value="Paçoca" class="acompCheckbox" />
+              Paçoca
+            </label>
+            <label>
+              <input type="checkbox" value="Sucrilho" class="acompCheckbox" />
+              Sucrilho
+            </label>
+          </div>
+
+          <h3>Escolha uma calda</h3>
+          <select id="caldaSelect" class="seleta">
+            <option value="Chocolate">Chocolate</option>
+            <option value="Morango">Morango</option>
+            <option value="Leite Condensado">Leite Condensado</option>
+          </select>
+
+          <h3>Escolha os extras</h3>
+          <div class="extra-items-container">
+            <div class="extra-item-container">
+              <div class="extra-title">Bis</div>
+              <div class="extra-item" data-price="1.50">
+                <div class="quantity-controls">
+                  <button
+                    class="quantity-button buttonExtra"
+                    type="button"
+                    onclick="decreaseQuantity(this)"
+                  >
+                    -
+                  </button>
+                  <span class="quantity">0</span>
+                  <button
+                    class="quantity-button buttonExtra"
+                    type="button"
+                    onclick="increaseQuantity(this)"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="extra-item-container">
+              <div class="extra-title">Bombom</div>
+              <div class="extra-item" data-price="1.50">
+                <div class="quantity-controls">
+                  <button
+                    class="quantity-button buttonExtra"
+                    type="button"
+                    onclick="decreaseQuantity(this)"
+                  >
+                    -
+                  </button>
+                  <span class="quantity">0</span>
+                  <button
+                    class="quantity-button buttonExtra"
+                    type="button"
+                    onclick="increaseQuantity(this)"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="extra-item-container">
+              <div class="extra-title">Tortuguita</div>
+              <div class="extra-item" data-price="1.50">
+                <div class="quantity-controls">
+                  <button
+                    class="quantity-button buttonExtra"
+                    type="button"
+                    onclick="decreaseQuantity(this)"
+                  >
+                    -
+                  </button>
+                  <span class="quantity">0</span>
+                  <button
+                    class="quantity-button buttonExtra"
+                    type="button"
+                    onclick="increaseQuantity(this)"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="extra-item-container">
+              <div class="extra-title">Marshmallow</div>
+              <div class="extra-item" data-price="1.50">
+                <div class="quantity-controls">
+                  <button
+                    class="quantity-button buttonExtra"
+                    type="button"
+                    onclick="decreaseQuantity(this)"
+                  >
+                    -
+                  </button>
+                  <span class="quantity">0</span>
+                  <button
+                    class="quantity-button buttonExtra"
+                    type="button"
+                    onclick="increaseQuantity(this)"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="extra-item-container">
+              <div class="extra-title">Nutella</div>
+              <div class="extra-item" data-price="2.00">
+                <div class="quantity-controls">
+                  <button
+                    class="quantity-button buttonExtra"
+                    type="button"
+                    onclick="decreaseQuantity(this)"
+                  >
+                    -
+                  </button>
+                  <span class="quantity">0</span>
+                  <button
+                    class="quantity-button buttonExtra"
+                    type="button"
+                    onclick="increaseQuantity(this)"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="extra-item-container">
+              <div class="extra-title">Orion</div>
+              <div class="extra-item" data-price="1.50">
+                <div class="quantity-controls">
+                  <button
+                    class="quantity-button buttonExtra"
+                    type="button"
+                    onclick="decreaseQuantity(this)"
+                  >
+                    -
+                  </button>
+                  <span class="quantity">0</span>
+                  <button
+                    class="quantity-button buttonExtra"
+                    type="button"
+                    onclick="increaseQuantity(this)"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit">Enviar Pedido</button>
+        </form>
+      </div>
+      <script src="index.js"></script>
+    </div>
+  </body>
+</html>

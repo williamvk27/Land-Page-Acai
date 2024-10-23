@@ -1,0 +1,260 @@
+.box-content {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #c9e4ca;
+}
+
+button[type='submit'] {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #754e63;
+  border: 1px solid #7d0078;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button[type='submit']:hover {
+  background-color: #664d53;
+}
+
+button[type='submit']:focus {
+  outline: none;
+  border: 1px solid #7d0078;
+  box-shadow: 0 0 5px #7d0078;
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: 1px solid #afe142;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+input[type='checkbox']:checked {
+  background-color: #754e63;
+  border: 1px solid #afe142;
+}
+
+input[type='checkbox']:checked::before {
+  content: '\2713';
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+input[type='checkbox']:focus {
+  outline: none;
+  border: 1px solid #7d0078;
+  box-shadow: 0 0 5px #7d0078;
+}
+
+.extra-items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.extra-item-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  border: 1px solid #afe142;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.extra-title {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f5f5f5;
+  padding: 0 5px;
+  font-weight: bold;
+  color: #7d0078;
+}
+
+.extra-item {
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.quantity-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-button {
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #754e63;
+  border: 1px solid #afe142;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.quantity-button:focus {
+  outline: none;
+  border: 1px solid #7d0078;
+  box-shadow: 0 0 5px #7d0078;
+}
+
+.form-container {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.checkbox-grid label {
+  display: flex;
+  align-items: center;
+  flex: 1 1 30%;
+  border: 1px solid #afe142;
+  max-width: 180px;
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s ease;
+}
+
+.checkbox-grid label:hover {
+  background-color: #e5e5e5;
+}
+
+.checkbox-grid label:focus {
+  outline: none;
+  border: 1px solid #7d0078;
+  box-shadow: 0 0 5px #7d0078;
+}
+
+select {
+  width: 98%;
+  margin: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #afe142;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.seleta {
+  background-image: url('img/arrow-down.png');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+button {
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonExtra {
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #754e63;
+  border: 1px solid #7d0078;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .checkbox-grid label {
+    flex: 1 1 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .checkbox-grid label {
+    flex: 1 1 22%;
+  }
+}
+
+.extras-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.descricao-pedido {
+  margin: 0;
+  padding: 10px;
+}
+
+.descricao-pedido h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #754e63;
+}
+
+.descricao-pedido p {
+  font-size: 14px;
+  color: #666;
+}
+
+.pedidos-mais-pedidos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.box-pedidos {
+  border: 1px solid #afe142;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+
+.pedido-mais-pedido img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.botao-adicionar {
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .box-pedidos {
+    flex-basis: 100%;
+  }
+}
